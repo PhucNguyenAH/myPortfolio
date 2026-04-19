@@ -186,7 +186,7 @@ const projects = ref([
             },
         ],
         links: [
-            {name: 'Live Demo', url: "#", icon: EyeIcon,
+            {name: 'Live Demo', url: "anhhoangphucnguyen.com", icon: EyeIcon,
                 class:'text-blue-400 hover:text-blue-300'
             },
             {name: 'Code', url: "https://github.com/PhucNguyenAH/myPortfolio", icon: CodeBracketIcon,
@@ -244,7 +244,7 @@ const projects = ref([
     {
         id: 4,
         title: "Text and object inpainting application",
-        desc: 'The app uses for removing text and objects in comic.',
+        desc: 'The application uses AI for removing text and objects in comic.',
         image: '../public/project4.png',
         category: 'Full-Stack',
         bordColor: 'border-cyan-500/20',
@@ -276,7 +276,7 @@ const projects = ref([
             },
         ],
         links: [
-            {name: 'Live Demo', url: "#", icon: EyeIcon,
+            {name: 'Demo', url: "https://youtu.be/gMRr_xQqEyg", icon: EyeIcon,
                 class:'text-blue-400 hover:text-blue-300'
             },
             {name: 'Code', url: "https://github.com/PhucNguyenAH/Object-inpainting-demo", icon: CodeBracketIcon,
