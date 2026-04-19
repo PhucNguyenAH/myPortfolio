@@ -38,6 +38,7 @@
                     datra-aos="fade-up"
                     data-aos-delay="300">
                     <button
+                    @click="scrollToContact"
                     class="px-8 md:px-10 py-4 rounded-xl relative group
                     w-full sm:w-max flex justify-center overflow-hidden
                     bg-linear-to-r from-blue-600 to-cyan-600
@@ -51,7 +52,9 @@
                         group-hover:translate-x-1 transition-transform"/>
                         </span>
                     </button>
-                    <button
+                    <a
+                    href="/Anh Hoang Phuc Nguyen - resume.pdf"
+                    download="Anh Hoang Phuc Nguyen - resume.pdf"
                     class="border-2 border-blue-400 px-8 md:px-10
                     py-4 rounded-1 relative group w-full sm:w-max
                     flex justify-center hover:bg-blue-400/10
@@ -65,7 +68,7 @@
                             Download Resume
                         </span>
                     </div>
-                    </button>
+                    </a>
                     </div>
                 <!-- <div class="flex items-center justify-center
                 lg:justify-start gap-8 pt-12"
@@ -113,9 +116,10 @@
 </template>
 
 <script setup>
-import { 
-    ArrowDownTrayIcon, 
-    ArrowRightIcon 
-    } from '@heroicons/vue/16/solid';
+import { ArrowDownTrayIcon, ArrowRightIcon } from '@heroicons/vue/16/solid';
+
+function scrollToContact() {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
