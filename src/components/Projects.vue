@@ -219,6 +219,9 @@ const projects = ref([
         links: [
             {name: 'Live Demo', url: "https://kevinchatbot.com/", icon: EyeIcon,
                 class:'text-blue-400 hover:text-blue-300'
+            }, 
+            {name: 'Demo', url: "https://youtu.be/DtYpRG9FelA", icon: EyeIcon,
+                class:'text-blue-400 hover:text-blue-300'
             },
             {name: 'Code', url: "https://github.com/PhucNguyenAH/MyAgent", icon: CodeBracketIcon,
                 class:'text-cyan-400 hover:text-cyan-300'
