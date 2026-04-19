@@ -95,7 +95,7 @@
                         data-aos="zoom-in" data-aos-delay="500">
                             <div class="rounded-xl overflow-hidden">
                                 <img 
-                                src="../../public/avatar.png"
+                                src="/avatar.png"
                                 alt="Anh Hoang Phuc Nguyen - AI/ML Engineer"
                                 loading="lazy"
                                 class="w-[500px] h-[500px] object-contain

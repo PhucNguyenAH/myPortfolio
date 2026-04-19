@@ -125,10 +125,10 @@ import { ArrowRightIcon,
         CubeIcon,
         CloudIcon,
         CubeTransparentIcon} from '@heroicons/vue/16/solid'
-import about1 from '../../public/About1.jpg'
-import about2 from '../../public/About2.jpg'
-import about3 from '../../public/About3.png'
-import about4 from '../../public/About4.png'
+import about1 from '/About1.jpg'
+import about2 from '/About2.jpg'
+import about3 from '/About3.png'
+import about4 from '/About4.png'
 
 const aboutImage = [
     {

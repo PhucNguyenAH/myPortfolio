@@ -18,7 +18,7 @@
                 <div
                 v-for="(project, index) in projects"
                 :key="project.id"
-                class="group relative bg-linear-br from-gray-800/50
+                class="group relative bg-linear-to-br from-gray-800/50
                 to-blue-900/30 rounded-3xl overflow-hidden border
                 backdrop-blur-sm hover:border-blue-400/40
                 transition-all duration-500 hover:transform
@@ -37,7 +37,7 @@
                         from-gray-900 via-transparent to-transparent">
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py01 text-white text-xs
+                            <span class="px-3 py-1 text-white text-xs
                             rounded-full font-semibold"
                             :class="project.badgColor">
                                 {{ project.category }}
@@ -82,26 +82,6 @@
                 </div>
             </div>
         </div>
-        <!-- CTA section -->
-        <!-- <div class="text-center mt-16" data-aos="fade-up">
-            <div class="inline-flex flex-col sm:flex-row gap-4 items-center">
-                <button class="px-8 py-4 rounded-xl bg-linear-to-r
-                from-blue-500 to-cyan-500 text-white
-                font-semibold hover:shadow-lg hover:shadow-blue-500/25
-                transition-all duration-300 hover:scale-105
-                flex items-center">
-                View All Projects
-                <ArrowRightIcon class="w-5 h-5 ml-2"/>
-                </button>
-                <button class="px-8 py-4 rounded-xl border-2
-                border-blue-400 text-blue-400 font-semibold
-                hover:bg-blue-400/10 transition-all duration-300
-                flex items-center">
-                    <ChatBubbleLeftRightIcon class="w-5 h-5 mr-2"/>
-                    Discuss Project
-                </button>
-            </div>
-        </div> -->
     </section>
 </template>
 
@@ -119,7 +99,7 @@ const projects = ref([
         id: 1,
         title: "Scoliosis Assessment Application",
         desc: 'The application is an end-to-end clinical decision support tool designed to automate the assessment of spinal X-rays. The app streamlines the diagnostic process by accurately calculating Cobb angles and detecting critical vertebral landmarks.',
-        image: '../public/project1.png',
+        image: '/project1.png',
         category: 'Full-Stack',
         bordColor: 'border-blue-500/20',
         badgColor: "bg-blue-500",
@@ -163,7 +143,7 @@ const projects = ref([
         id: 2,
         title: "Portfolio App",
         desc: 'My portfolio website contains my professional profile with the description of my projects.',
-        image: '../public/project2.png',
+        image: '/project2.png',
         category: 'Porfolio',
         bordColor: 'border-cyan-500/20',
         badgColor: "bg-cyan-500",
@@ -198,7 +178,7 @@ const projects = ref([
         id: 3,
         title: "Personal Portfolio Chatbot",
         desc: 'My personal portfolio chatbot where you can ask anything about me.',
-        image: '../public/project3.png',
+        image: '/project3.png',
         category: 'Porfolio chatbot',
         bordColor: 'border-blue-500/20',
         badgColor: "bg-blue-500",
@@ -245,7 +225,7 @@ const projects = ref([
         id: 4,
         title: "Text and object inpainting application",
         desc: 'The application uses AI for removing text and objects in comic.',
-        image: '../public/project4.png',
+        image: '/project4.png',
         category: 'Full-Stack',
         bordColor: 'border-cyan-500/20',
         badgColor: "bg-cyan-500",

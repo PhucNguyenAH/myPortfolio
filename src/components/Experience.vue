@@ -66,7 +66,8 @@ const experiences = [
         position: "Research Assistant",
         company: "University of Technology, Sydney",
         period: "April 2025 - February 2026",
-        desc: `• Implemented ETL pipeline for processing X-ray images, resulting in over 20,000 X-ray images with landmark annotations.
+        desc: `<strong>Project: Scoliosis Assessment Application</strong>
+        • Implemented ETL pipeline for processing X-ray images, resulting in over 20,000 X-ray images with landmark annotations.
         • Fine-tuned Mask R-CNN models for vertebrae segmentation and proposed APEX/Cobb angle measurement method, with an absolute error of 3.02°±2.85°.
         • Architected a CI/CD pipeline via GitHub Actions, Docker to automate deployment on AWS EC2, integrating AWS S3 for secure versioning and efficient retrieval of deep learning model weights.`,
         techStack: ['Python', 'PyTorch', 'Mask R-CNN', 'AWS EC2', 'AWS S3', 'Docker', 'GitHub Actions'],
@@ -96,11 +97,11 @@ const experiences = [
         position: "Machine Learning Engineer",
         company: "Ycomm Viet Nam",
         period: "April 2023 - January 2024",
-        desc: `<strong>Webtoon editor</strong> – Agile development
+        desc: `<strong> Project: Webtoon editor</strong> – Agile development
         • Deployed text inpainting API using LaMa model and text detection APIs using EasyOCR and Google Vision API, which is the main feature in the webtoon editor.
         • Built a webtoon dataset pipeline for English, Korean, Japanese, and Chinese using Label Studio.
 
-        <strong>Subtitle extractor</strong> – Agile development
+        <strong>Project: Subtitle extractor</strong> – Agile development
         • Deployed Stable_Whisper and Google Speech-to-text API to extract subtitles in cartoons.
         • Integrated DeepL API for translation API.`,
         techStack: ['Python', 'LaMa', 'EasyOCR', 'Google Vision API', 'Label Studio', 'Stable Whisper', 'DeepL API'],
@@ -116,16 +117,16 @@ const experiences = [
         position: "Artificial Intelligence Specialist",
         company: "VinBigData",
         period: "October 2021 - July 2022",
-        desc: `<strong>Text-to-Speech with subword embedding</strong>
+        desc: `<strong>Project: Text-to-Speech with subword embedding</strong>
         • Researched phoneme + subword context modelling based on Tacotron2. 
         • Developed a custom Vietnamese tokenizer using Hugging Face tokenization tools.
         • Achieved Mel Cepstral Distortion (MCD) of 11.37, outperforming phoneme-only (12.1) and subword-only (11.77) models.
 
-        <strong>Vietnamese Spelling Error Correction System</strong>
+        <strong>Project: Vietnamese Spelling Error Correction System</strong>
         • Implemented augmentation techniques to create 5 million training samples.
         • Experimented with BI-LSTM (ROUGE-1 0.86), and Transformer (ROUGE-1 0.93).
 
-        <strong>Visual Question Answering</strong>
+        <strong>Project: Visual Question Answering</strong>
         • Implemented pipeline including Faster R-CNN for image feature extraction, GloVe embeddings for question representation, and BERT for context modeling.
         • Achieved overall accuracy of 70.98%.`,
         techStack: ['Python', 'PyTorch', 'Tacotron2', 'Hugging Face', 'BERT', 'Faster R-CNN', 'GloVe', 'BI-LSTM', 'Transformer'],

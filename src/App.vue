@@ -10,6 +10,7 @@
         <Experience />
         <Education />
         <Projects />
+        <Publications />
         <Contact />
         <BackToTop />
     </div>
@@ -28,6 +29,7 @@ import Projects from './components/Projects.vue';
 import Contact from './components/Contact.vue';
 import BackToTop from './components/BackToTop.vue';
 import LoadingSpinner from './components/LoadingSpinner.vue';
+import Publications from './components/Publications.vue';
 
 export default defineComponent({
     name: 'App',
@@ -38,6 +40,7 @@ export default defineComponent({
         Experience,
         Education,
         Projects,
+        Publications,
         Contact,
         BackToTop,
         LoadingSpinner
