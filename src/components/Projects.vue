@@ -52,7 +52,8 @@
                         duration-300">
                             {{ project.title }}
                         </h3>
-                        <p class="text-blue-100 text-sm leading-relaxed mb-4">
+                        <p class="text-blue-100 text-sm leading-relaxed mb-4
+                        whitespace-pre-line">
                             {{ project.desc }}
                         </p>
                         <!-- Technologies -->
@@ -177,7 +178,10 @@ const projects = ref([
     {
         id: 3,
         title: "Personal Portfolio Chatbot",
-        desc: 'My personal portfolio chatbot where you can ask anything about me.',
+        desc: `My personal portfolio chatbot where you can ask anything about me.
+        • Built an interactive Retrieval-Augmented Generation (RAG) application using LangChain, the OpenAI API, and Streamlit to answer recruiter queries about my background. 
+        • Integrated a vector database backend using Supabase (PostgreSQL with pgvector) to embed and retrieve context from personal documents. 
+        • Architected CI/CID pipeline using Docker and GitHub Actions for delivery to Google Cloud Run.`,
         image: '/project3.png',
         category: 'Porfolio chatbot',
         bordColor: 'border-blue-500/20',
@@ -224,7 +228,9 @@ const projects = ref([
     {
         id: 4,
         title: "Text and object inpainting application",
-        desc: 'The application uses AI for removing text and objects in comic.',
+        desc: `The application uses AI for removing text and objects in comic.
+        • Deployed text inpainting API using LaMa model and text detection APIs using EasyOCR and Google Vision API, which is the main feature in the webtoon editor. 
+        • Built a webtoon dataset pipeline for English, Korean, Japanese, and Chinese using sLabel Studio.`,
         image: '/project4.png',
         category: 'Full-Stack',
         bordColor: 'border-cyan-500/20',
@@ -260,6 +266,88 @@ const projects = ref([
                 class:'text-blue-400 hover:text-blue-300'
             },
             {name: 'Code', url: "https://github.com/PhucNguyenAH/Object-inpainting-demo", icon: CodeBracketIcon,
+                class:'text-cyan-400 hover:text-cyan-300'
+            },
+        ]
+    },
+    {
+        id: 5,
+        title: "SonicJob application",
+        desc: `The job platform to support both job seekers and recruiters.
+        • Collected, cleaned and combined multiple job skill datasets to fine-tune RoBerta for Name Entity Recognition task, achieving F1 score of 81%. 
+        • Built ClearML pipeline for data extraction, data preparation, model training, model evaluation, optimization, and model selection.`,
+        image: '/project5.png',
+        category: 'Full-Stack',
+        bordColor: 'border-cyan-500/20',
+        badgColor: "bg-cyan-500",
+        technolg: [
+             {
+                name: 'Python', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+            },
+            {
+                name: 'Streamlit', 
+                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+            },
+            {
+                name: 'ClearML', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+            },
+            {
+                name: 'RoBERTa', 
+                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+            },
+            {
+                name: 'Git Actions', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+            },
+        ],
+        links: [
+            {name: 'Demo', url: "https://youtu.be/mxFKVGP5VD4", icon: EyeIcon,
+                class:'text-blue-400 hover:text-blue-300'
+            },
+            {name: 'Code', url: "https://github.com/PhucNguyenAH/sonic", icon: CodeBracketIcon,
+                class:'text-cyan-400 hover:text-cyan-300'
+            },
+        ]
+    },
+
+    {
+        id: 6,
+        title: "Navigating Textual Environments through Reinforcement Learning in TextWorld Game",
+        desc: `The TextWorld Cooking Game environment is a text-based environment to train reinforcement learning agents to complete a full cooking task using natural language commands. The goal is to find the kitchen, read the cookbook to learn a recipe, gather ingredients, process them, and finally prepare and eat the meal.
+        • Develop Actor-Critic and Deep Q-Network agents to solve the multiple Textworld games, achieving 80-90% in baseline environments.`,
+        image: '/project6.png',
+        category: 'Research',
+        bordColor: 'border-cyan-500/20',
+        badgColor: "bg-cyan-500",
+        technolg: [
+             {
+                name: 'Python', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+            },
+            {
+                name: 'Flask', 
+                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+            },
+            {
+                name: 'Actor-Critic', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+            },
+            {
+                name: 'Deep Q-Network', 
+                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+            },
+            {
+                name: 'Git', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+            },
+        ],
+        links: [
+            {name: 'Demo', url: "https://youtu.be/ml-8Dh_RVCk", icon: EyeIcon,
+                class:'text-blue-400 hover:text-blue-300'
+            },
+            {name: 'Code', url: "https://github.com/PhucNguyenAH/Sonic_RL", icon: CodeBracketIcon,
                 class:'text-cyan-400 hover:text-cyan-300'
             },
         ]
