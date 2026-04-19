@@ -102,7 +102,8 @@
                     class="px-8 py-3 rounded-xl font-semibold
                     transition-allduration-300 flex items-center
                     justify-center"
-                    :class="button.classes">
+                    :class="button.classes"
+                    @click="button.onClick && button.onClick()">
                     <component
                     :is="button.icon"
                     class="w-4 h-4"
@@ -220,14 +221,16 @@ const ctaButtons = [
         text: 'View Portfolio',
         icon: ArrowRightIcon,
         iconclass: 'ml-2 group-hover:translate-x-1 transition-transform',
-        classes: 'bg-linear-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-500 hover:to-cyan-500'
+        classes: 'bg-linear-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-500 hover:to-cyan-500',
+        onClick: () => window.open('https://anhhoangphucnguyen.com', '_blank')
     },
     {
         id:2,
         text: 'Contact Me',
         icon: ChatBubbleLeftRightIcon,
         iconclass: 'mr-2',
-        classes: 'border border-blue-400 text-blue-400 hover:bg-blue-400/10'
+        classes: 'border border-blue-400 text-blue-400 hover:bg-blue-400/10',
+        onClick: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
     },
 ]
 </script>
