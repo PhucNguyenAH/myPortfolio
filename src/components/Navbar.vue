@@ -55,7 +55,8 @@
             <button class="px-6 py-2.5 bg-linear-to-r from-blue-500
             to-cyan-500 text-white rounded-full hover:shadow-lg
             hover:shadow-blue-500/25 transition-all duration-300
-            hover:scale-105">
+            hover:scale-105"
+            @click="scrollToSection('#contact')">
             Let's Talk
             </button>
         </div>
