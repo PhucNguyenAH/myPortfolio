@@ -189,7 +189,7 @@ const projects = ref([
             {name: 'Live Demo', url: "#", icon: EyeIcon,
                 class:'text-blue-400 hover:text-blue-300'
             },
-            {name: 'Code', url: "#", icon: CodeBracketIcon,
+            {name: 'Code', url: "https://github.com/PhucNguyenAH/myPortfolio", icon: CodeBracketIcon,
                 class:'text-cyan-400 hover:text-cyan-300'
             },
         ]

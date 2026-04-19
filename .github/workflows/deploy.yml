@@ -7,9 +7,9 @@ on:
 
 env:
   PROJECT_ID: my-portfolio-493810
-  REGION: australia-southeast1
+  REGION: asia-southeast1
   SERVICE: phuc-portfolio
-  IMAGE: australia-southeast1-docker.pkg.dev/my-portfolio-493810/portfolio/phuc-portfolio
+  IMAGE: asia-southeast1-docker.pkg.dev/my-portfolio-493810/portfolio/phuc-portfolio
 
 jobs:
   deploy:
@@ -28,7 +28,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
+        run: gcloud auth configure-docker asia-southeast1-docker.pkg.dev --quiet
 
       - name: Build and push Docker image
         run: |
