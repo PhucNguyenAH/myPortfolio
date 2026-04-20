@@ -1,5 +1,5 @@
 <template>
-    <section class="relative w-full overflow-hidden min-h-screen
+    <section class="relative w-full overflow-hidden py-20
     flex items-center">
         <div class="w-full px-5 sm:px-8 md:px-12 lg:px-8 max-w-5xl
         lg:max-w-7xl mx-auto relative z-10">
