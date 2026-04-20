@@ -26,7 +26,7 @@
                 </p>
                 </div>
                 <p class="text-gray-300 pt-6 text-center
-                mx-auto max-w-xl text-lg leading-relaced"
+                mx-auto max-w-3xl text-lg leading-relaced text-pretty"
                 data-aos="fade-right"
                 data-aos-delay="200">
                     I am an AI/ML Engineer and Data Scientist with a Master of Artificial Intelligence and published research experience. I specialise in bridging advanced academic research with hands-on technical execution, particularly in the fields of computer vision and natural language processing.
