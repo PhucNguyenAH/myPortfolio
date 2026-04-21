@@ -72,7 +72,7 @@ const educations = [
         id: 2,
         university: "Ho Chi Minh City University of Technology (HCMUT)",
         qualification: "Bachelor of Engineering in Computer Science",
-        period: "October 2025 - December 2025",
+        period: "August 2017 - October 2021",
         desc: `• Authored Facial Recognition Attendance System in the 8th Science and Technology Symposium for OISP Students.
         • Implemented Kalman filter for optimised face tracking and Apache Kafka to connect Jetson Nano and Google Cloud Platform.
         • Fine-tuned FaceNet on HCMUT student dataset, achieving F1 score of 99.395% (0.335% improvement over baseline).`,
