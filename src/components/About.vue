@@ -204,7 +204,7 @@ const skills = [
         icon:CircleStackIcon,
         iconColor: "text-blue-400",
         title: "Database",
-        desc: "SQLit3, PGVector, MySQL"
+        desc: "SQLite3, PGVector, MySQL"
     },
     {
         id:5,
