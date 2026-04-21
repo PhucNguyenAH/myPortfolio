@@ -57,7 +57,7 @@ const educations = [
         id: 1,
         university: "University of Technology, Sydney (UTS)",
         qualification: "Master of Artificial Intelligence",
-        period: "April 2025 - February 2026",
+        period: "February 2024 - December 2025",
         desc: `• Postgraduate Academic Excellence International Scholarship.
         • Participated in Waymo 3D Semantic Segmentation Challenge: trained and validated SpUNet and Point Transformer V3 on Waymo v2.0.1.
         • Implemented ClearML for the Job and Candidate recommendation project, nominated for presentation at AI Showcase in UTS FEIT TechFest 2025.`,
