@@ -13,6 +13,7 @@
         <Publications />
         <Contact />
         <BackToTop />
+        <!-- <Chatbot /> -->
     </div>
 </template>
 <script>
@@ -30,6 +31,7 @@ import Contact from './components/Contact.vue';
 import BackToTop from './components/BackToTop.vue';
 import LoadingSpinner from './components/LoadingSpinner.vue';
 import Publications from './components/Publications.vue';
+import Chatbot from './components/Chatbot.vue';
 
 export default defineComponent({
     name: 'App',
@@ -42,8 +44,9 @@ export default defineComponent({
         Projects,
         Publications,
         Contact,
+        // Chatbot,
         BackToTop,
-        LoadingSpinner
+        LoadingSpinner,
     },
     setup() {
         const loading = ref(true);
