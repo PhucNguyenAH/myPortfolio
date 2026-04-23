@@ -11,7 +11,7 @@
                 <div class="flex items-center justify-between px-4 py-3 bg-linear-to-r from-blue-600 to-cyan-600">
                     <div class="flex items-center gap-2">
                         <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                        <span class="text-white font-semibold text-sm">Chat with Phuc's AI</span>
+                        <span class="text-white font-semibold text-sm">Chat with Anh's AI</span>
                     </div>
                     <button @click="isOpen = false" class="text-white/70 hover:text-white text-lg leading-none">✕</button>
                 </div>
@@ -131,7 +131,7 @@ const jdLoaded = ref(false);
 
 // history stores {role, content} for both display and API
 const messages = ref([
-    { role: 'assistant', content: "Hi! I'm Phuc's AI assistant. Ask me anything about his skills, experience, or projects 👋\n\nYou can also upload a Job Description (📎) to see how well Phuc fits the role!" }
+    { role: 'assistant', content: "Hi! I'm Anh's AI assistant. Ask me anything about his skills, experience, or projects 👋\n\nYou can also upload a Job Description (📎) to see how well Phuc fits the role!" }
 ]);
 
 async function scrollToBottom() {
