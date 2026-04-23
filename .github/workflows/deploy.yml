@@ -8,12 +8,15 @@ on:
 env:
   PROJECT_ID: my-portfolio-493810
   REGION: asia-southeast1
-  SERVICE: phuc-portfolio
-  IMAGE: asia-southeast1-docker.pkg.dev/my-portfolio-493810/portfolio/phuc-portfolio
+  REGISTRY: asia-southeast1-docker.pkg.dev/my-portfolio-493810/portfolio
+  FRONTEND_SERVICE: phuc-portfolio
+  BACKEND_SERVICE: phuc-portfolio-backend
 
 jobs:
-  deploy:
+  deploy-backend:
     runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.deploy.outputs.url }}
 
     steps:
       - name: Checkout
@@ -28,19 +31,64 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker asia-southeast1-docker.pkg.dev --quiet
+        run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
 
-      - name: Build and push Docker image
+      - name: Build and push backend image
         run: |
-          docker build -t ${{ env.IMAGE }}:${{ github.sha }} -t ${{ env.IMAGE }}:latest .
-          docker push ${{ env.IMAGE }}:${{ github.sha }}
-          docker push ${{ env.IMAGE }}:latest
+          docker build \
+            -t ${{ env.REGISTRY }}/phuc-portfolio-backend:${{ github.sha }} \
+            -t ${{ env.REGISTRY }}/phuc-portfolio-backend:latest \
+            ./backend
+          docker push ${{ env.REGISTRY }}/phuc-portfolio-backend:${{ github.sha }}
+          docker push ${{ env.REGISTRY }}/phuc-portfolio-backend:latest
 
-      - name: Deploy to Cloud Run
+      - name: Deploy backend to Cloud Run
+        id: deploy
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: ${{ env.BACKEND_SERVICE }}
+          image: ${{ env.REGISTRY }}/phuc-portfolio-backend:${{ github.sha }}
+          region: ${{ env.REGION }}
+          flags: --allow-unauthenticated --port 8080
+          env_vars: |
+            ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+            OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+            DATABASE_URL=${{ secrets.DATABASE_URL }}
+            ALLOWED_ORIGINS=${{ secrets.ALLOWED_ORIGINS }}
+
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    needs: deploy-backend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
+
+      - name: Build and push frontend image
         run: |
-          gcloud run deploy ${{ env.SERVICE }} \
-            --image ${{ env.IMAGE }}:${{ github.sha }} \
-            --region ${{ env.REGION }} \
-            --platform managed \
-            --allow-unauthenticated \
-            --port 8080
+          docker build \
+            --build-arg VITE_API_URL=${{ needs.deploy-backend.outputs.url }} \
+            -t ${{ env.REGISTRY }}/phuc-portfolio:${{ github.sha }} \
+            -t ${{ env.REGISTRY }}/phuc-portfolio:latest \
+            .
+          docker push ${{ env.REGISTRY }}/phuc-portfolio:${{ github.sha }}
+          docker push ${{ env.REGISTRY }}/phuc-portfolio:latest
+
+      - name: Deploy frontend to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: ${{ env.FRONTEND_SERVICE }}
+          image: ${{ env.REGISTRY }}/phuc-portfolio:${{ github.sha }}
+          region: ${{ env.REGION }}
+          flags: --allow-unauthenticated --port 8080

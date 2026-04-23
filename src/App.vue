@@ -13,7 +13,7 @@
         <Publications />
         <Contact />
         <BackToTop />
-        <!-- <Chatbot /> -->
+        <Chatbot />
     </div>
 </template>
 <script>
@@ -44,7 +44,7 @@ export default defineComponent({
         Projects,
         Publications,
         Contact,
-        // Chatbot,
+        Chatbot,
         BackToTop,
         LoadingSpinner,
     },
