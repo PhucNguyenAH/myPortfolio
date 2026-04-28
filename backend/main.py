@@ -62,19 +62,6 @@ class ChatRequest(BaseModel):
     jd_context: str | None = None
 
 
-def build_system_prompt(context: str, jd_context: str | None) -> str:
-    prompt = BASE_SYSTEM_PROMPT + f"\n\nContext:\n{context}"
-    if jd_context:
-        prompt += (
-            "\n\n--- UPLOADED JOB DESCRIPTION ---\n"
-            "The user has uploaded a Job Description for an AI Engineer or Data Scientist role:\n"
-            f"{jd_context}\n\n"
-            "CRITICAL INSTRUCTION: Analyze my skills and the retrieved context against this Job Description. "
-            "Actively highlight specific matching qualifications, tools, and experiences to articulate exactly "
-            "why I am a strong candidate for this role."
-        )
-    return prompt
-
 
 def retrieve_context(question: str) -> str:
     docs = vector_store.similarity_search(question, k=4)
@@ -86,7 +73,6 @@ async def stream_response(request: ChatRequest) -> AsyncGenerator[str, None]:
         (m.content for m in reversed(request.messages) if m.role == "user"), ""
     )
     context = retrieve_context(last_user_message)
-    system_prompt = build_system_prompt(context, request.jd_context)
 
     # Cache the system prompt (stable across turns) and last user message
     api_messages = []
@@ -100,10 +86,24 @@ async def stream_response(request: ChatRequest) -> AsyncGenerator[str, None]:
         else:
             api_messages.append({"role": msg.role, "content": msg.content})
 
+    dynamic_block = f"\n\nContext:\n{context}"
+    if request.jd_context:
+        dynamic_block += (
+            "\n\n--- UPLOADED JOB DESCRIPTION ---\n"
+            "The user has uploaded a Job Description for an AI Engineer or Data Scientist role:\n"
+            f"{request.jd_context}\n\n"
+            "CRITICAL INSTRUCTION: Analyze my skills and the retrieved context against this Job Description. "
+            "Actively highlight specific matching qualifications, tools, and experiences to articulate exactly "
+            "why I am a strong candidate for this role."
+        )
+
     with claude.messages.stream(
         model=MODEL,
         max_tokens=1024,
-        system=[{"type": "text", "text": system_prompt, "cache_control": {"type": "ephemeral"}}],
+        system=[
+            {"type": "text", "text": BASE_SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}},
+            {"type": "text", "text": dynamic_block},
+        ],
         messages=api_messages,
     ) as stream:
         for text in stream.text_stream:

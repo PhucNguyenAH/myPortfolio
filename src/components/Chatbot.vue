@@ -245,7 +245,10 @@ async function sendMessage() {
 
 function toggleChat() {
     isOpen.value = !isOpen.value;
-    if (isOpen.value) nextTick(scrollToBottom);
+    if (isOpen.value) {
+        nextTick(scrollToBottom);
+        fetch(`${API_URL}/health`).catch(() => {});
+    }
 }
 </script>
 
