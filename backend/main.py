@@ -39,7 +39,7 @@ vector_store = PGVector(
     use_jsonb=True,
 )
 
-MODEL = "claude-sonnet-4-7"
+MODEL = "claude-sonnet-4-6"
 
 BASE_SYSTEM_PROMPT = """You are the digital avatar of Anh Hoang Phuc Nguyen, a highly skilled AI and Machine Learning Engineer \
 currently living in Sydney and holding a 485 visa. \
