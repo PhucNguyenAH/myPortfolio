@@ -1,5 +1,8 @@
-# Vue 3 + Vite
+# Portfolio - Anh Hoang Phuc Nguyen
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Hi, I am Anh. I am an AI/ML Engineer and Data Scientist with a Master of Artificial Intelligence and 3 years of experience. I specialise in applying AI solutions to industry products, with hands-on technical execution, particularly in the fields of computer vision and natural language processing.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+This is my portfolio website, where you can understand more about my background and my experience. Let's reach out if you're interested!
+
+Best,
+Anh Hoang Phuc Nguyen
