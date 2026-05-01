@@ -238,7 +238,7 @@ async function sendMessage() {
         isThinking.value = false;
         messages.value.push({ role: 'assistant', content: "Sorry, I couldn't connect to the server. Please try again later." });
     } finally {
-        isStreaming.value = false;
+        isStreaming.value = true;
         await scrollToBottom();
     }
 }
