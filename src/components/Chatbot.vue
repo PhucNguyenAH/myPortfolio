@@ -185,6 +185,8 @@ async function sendMessage() {
         .filter(m => !m.streaming)
         .map(m => ({ role: m.role, content: m.content }));
 
+    let botMsgIndex = -1;
+
     try {
         const res = await fetch(`${API_URL}/chat`, {
             method: 'POST',
@@ -202,9 +204,8 @@ async function sendMessage() {
         isThinking.value = false;
         isStreaming.value = true;
 
-        // Add empty streaming message
         messages.value.push({ role: 'assistant', content: '', streaming: true });
-        const botMsgIndex = messages.value.length - 1;
+        botMsgIndex = messages.value.length - 1;
         await scrollToBottom();
 
         const reader = res.body.getReader();
@@ -217,7 +218,7 @@ async function sendMessage() {
 
             buffer += decoder.decode(value, { stream: true });
             const lines = buffer.split('\n');
-            buffer = lines.pop(); // keep incomplete line
+            buffer = lines.pop();
 
             for (const line of lines) {
                 if (!line.startsWith('data: ')) continue;
@@ -233,12 +234,22 @@ async function sendMessage() {
             }
         }
 
-        messages.value[botMsgIndex].streaming = false;
+        const botMsg = messages.value[botMsgIndex];
+        botMsg.streaming = false;
+        if (!botMsg.content.trim()) {
+            botMsg.content = "Sorry, I didn't receive a response. Please try again.";
+        }
     } catch (e) {
         isThinking.value = false;
-        messages.value.push({ role: 'assistant', content: "Sorry, I couldn't connect to the server. Please try again later." });
+        if (botMsgIndex >= 0) {
+            messages.value[botMsgIndex].streaming = false;
+            messages.value[botMsgIndex].content = "Sorry, I couldn't connect to the server. Please try again later.";
+        } else {
+            messages.value.push({ role: 'assistant', content: "Sorry, I couldn't connect to the server. Please try again later." });
+        }
     } finally {
-        isStreaming.value = true;
+        isThinking.value = false;
+        isStreaming.value = false;
         await scrollToBottom();
     }
 }
