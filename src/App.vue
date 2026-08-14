@@ -13,7 +13,7 @@
         <Publications />
         <Contact />
         <BackToTop />
-        <Chatbot />
+        <!-- <Chatbot /> -->
     </div>
 </template>
 <script>
@@ -31,7 +31,7 @@ import Contact from './components/Contact.vue';
 import BackToTop from './components/BackToTop.vue';
 import LoadingSpinner from './components/LoadingSpinner.vue';
 import Publications from './components/Publications.vue';
-import Chatbot from './components/Chatbot.vue';
+// import Chatbot from './components/Chatbot.vue';
 
 export default defineComponent({
     name: 'App',
@@ -44,7 +44,7 @@ export default defineComponent({
         Projects,
         Publications,
         Contact,
-        Chatbot,
+        // Chatbot,
         BackToTop,
         LoadingSpinner,
     },
