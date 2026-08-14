@@ -63,6 +63,22 @@ import { BriefcaseIcon, Squares2X2Icon } from '@heroicons/vue/16/solid';
 const experiences = [
     {
         id: 1,
+        position: "AI engineer",
+        company: "Chipforge.ai",
+        period: "May 2026 - August 2026",
+        desc: `<strong>Project: LLM for chip design</strong>
+        • Implemented the Reflexion Loop in Chipforge platform, fix the bugs of HDL in 3-5 iterations.
+        • Data mining and analysis for training LLM models, scraping nearly 1600 HDL Github repositories, processing the CPT, generating the HDL specifications for SFT data.`,
+        techStack: ['Python', 'Icarus Verilog', 'AWS S3'],
+        borderColor: "border-cyan-500/30",
+        dotColor: "bg-cyan-500",
+        borderClass: "border-cyan-500/20",
+        dateColor: "text-cyan-400 text-sm font-semibold",
+        companyColor: "text-blue-400",
+    },
+
+    {
+        id: 2,
         position: "Research Assistant",
         company: "University of Technology, Sydney",
         period: "April 2025 - February 2026",
@@ -79,7 +95,7 @@ const experiences = [
     },
 
     {
-        id: 2,
+        id: 3,
         position: "Research Assistant",
         company: "The University of Melbourne",
         period: "October 2025 - December 2025",
@@ -93,7 +109,7 @@ const experiences = [
     },
 
     {
-        id: 3,
+        id: 4,
         position: "Machine Learning Engineer",
         company: "Ycomm Viet Nam",
         period: "April 2023 - January 2024",
@@ -113,7 +129,7 @@ const experiences = [
     },
 
     {
-        id: 4,
+        id: 5,
         position: "Artificial Intelligence Specialist",
         company: "VinBigData",
         period: "October 2021 - July 2022",
@@ -138,7 +154,7 @@ const experiences = [
     },
 
     {
-        id: 5,
+        id: 6,
         position: "Data Scientist",
         company: "FPT Telecom",
         period: "June 2021 - October 2021",
@@ -154,7 +170,7 @@ const experiences = [
     },
 
     {
-        id: 6,
+        id: 7,
         position: "Artificial Intelligence Intern",
         company: "Cloud Nine Solutions",
         period: "July 2020 - October 2020",
