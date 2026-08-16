@@ -67,9 +67,9 @@ const experiences = [
         company: "Chipforge.ai",
         period: "May 2026 - August 2026",
         desc: `<strong>Project: LLM for chip design</strong>
-        • Implemented the Reflexion Loop in Chipforge platform, fix the bugs of HDL in 3-5 iterations.
-        • Data mining and analysis for training LLM models, scraping nearly 1600 HDL Github repositories, processing the CPT, generating the HDL specifications for SFT data.`,
-        techStack: ['Python', 'Icarus Verilog', 'AWS S3'],
+        • Implemented the Reflexion Loop in Chipforge platform, wrote testcases for unitest, fix the bugs of HDL in 3-5 iterations.
+        • Data mining and analysis of around 1600 HDL GitHub repositories, processing the CPT, generating the HDL specifications for SFT data and training Nemotron3-Nano.`,
+        techStack: ['Python', 'Pytorch', 'continuous pretraining and fine-tuning LLM', 'Icarus Verilog', 'AWS S3', 'Bedrock', 'OpenRouter'],
         borderColor: "border-cyan-500/30",
         dotColor: "bg-cyan-500",
         borderClass: "border-cyan-500/20",
