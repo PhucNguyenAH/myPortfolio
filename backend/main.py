@@ -28,6 +28,22 @@ app.add_middleware(
 
 claude = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
+
+def normalise_connection(url: str) -> str:
+    """Force the psycopg (v3) driver on a Postgres URL.
+
+    Supabase hands out bare `postgresql://` connection strings, which make
+    SQLAlchemy reach for psycopg2 — not in requirements.txt, only psycopg v3 is.
+    """
+    if url.startswith("postgresql+"):
+        return url
+    if url.startswith("postgresql://"):
+        return url.replace("postgresql://", "postgresql+psycopg://", 1)
+    if url.startswith("postgres://"):
+        return url.replace("postgres://", "postgresql+psycopg://", 1)
+    return url
+
+
 embeddings = OpenAIEmbeddings(
     model="text-embedding-3-small",
     api_key=os.getenv("OPENAI_API_KEY"),
@@ -35,7 +51,7 @@ embeddings = OpenAIEmbeddings(
 vector_store = PGVector(
     embeddings=embeddings,
     collection_name="my_docs",
-    connection=os.getenv("DATABASE_URL"),
+    connection=normalise_connection(os.getenv("DATABASE_URL", "")),
     use_jsonb=True,
 )
 

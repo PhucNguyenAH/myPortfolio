@@ -28,4 +28,5 @@ dist-ssr
 key.json
 nocommit.txt
 *__pycache__*
-deploy_chat.yml
+.venv
+README_instruction.md

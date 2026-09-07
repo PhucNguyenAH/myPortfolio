@@ -143,7 +143,10 @@ const projects = ref([
     {
         id: 2,
         title: "Portfolio App",
-        desc: 'My portfolio website contains my professional profile with the description of my projects.',
+        desc: `My portfolio website contains my professional profile with the description of my projects.
+        • Built an interactive Retrieval-Augmented Generation (RAG) application using LangChain, the Claude API, and VueJS to answer recruiter queries about my background.
+        • Engineered a vector database backend using Supabase (PostgreSQL with pgvector) to embed and retrieve context from personal documents. 
+        • Architected CI/CID pipeline using Docker and GitHub Actions for delivery to Google Cloud Run.`,
         image: '/project2.png',
         category: 'Porfolio',
         bordColor: 'border-cyan-500/20',
@@ -175,61 +178,61 @@ const projects = ref([
             },
         ]
     },
+    // {
+    //     id: 3,
+    //     title: "Personal Portfolio Chatbot",
+    //     desc: `My personal portfolio chatbot where you can ask anything about me.
+    //     • Built an interactive Retrieval-Augmented Generation (RAG) application using LangChain, the OpenAI API, and Streamlit to answer recruiter queries about my background. 
+    //     • Integrated a vector database backend using Supabase (PostgreSQL with pgvector) to embed and retrieve context from personal documents. 
+    //     • Architected CI/CID pipeline using Docker and GitHub Actions for delivery to Google Cloud Run.`,
+    //     image: '/project3.png',
+    //     category: 'Porfolio chatbot',
+    //     bordColor: 'border-blue-500/20',
+    //     badgColor: "bg-blue-500",
+    //     technolg: [
+    //         {
+    //             name: 'Python', 
+    //             class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+    //         },
+    //         {
+    //             name: 'Retrieval Augmented Generation (RAG)', 
+    //             class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+    //         },
+    //         {
+    //             name: 'LangChain', 
+    //             class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+    //         },
+    //         {
+    //             name: 'PGVector', 
+    //             class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+    //         },
+    //         {
+    //             name: 'GCP Cloud Run', 
+    //             class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+    //         },
+    //         {
+    //             name: 'Docker', 
+    //             class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+    //         },
+    //         {
+    //             name: 'Git Actions', 
+    //             class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+    //         },
+    //     ],
+    //     links: [
+    //         {name: 'Live Demo', url: "https://kevinchatbot.com/", icon: EyeIcon,
+    //             class:'text-blue-400 hover:text-blue-300'
+    //         }, 
+    //         {name: 'Demo', url: "https://youtu.be/DtYpRG9FelA", icon: EyeIcon,
+    //             class:'text-blue-400 hover:text-blue-300'
+    //         },
+    //         {name: 'Code', url: "https://github.com/PhucNguyenAH/MyAgent", icon: CodeBracketIcon,
+    //             class:'text-cyan-400 hover:text-cyan-300'
+    //         },
+    //     ]
+    // },
     {
         id: 3,
-        title: "Personal Portfolio Chatbot",
-        desc: `My personal portfolio chatbot where you can ask anything about me.
-        • Built an interactive Retrieval-Augmented Generation (RAG) application using LangChain, the OpenAI API, and Streamlit to answer recruiter queries about my background. 
-        • Integrated a vector database backend using Supabase (PostgreSQL with pgvector) to embed and retrieve context from personal documents. 
-        • Architected CI/CID pipeline using Docker and GitHub Actions for delivery to Google Cloud Run.`,
-        image: '/project3.png',
-        category: 'Porfolio chatbot',
-        bordColor: 'border-blue-500/20',
-        badgColor: "bg-blue-500",
-        technolg: [
-            {
-                name: 'Python', 
-                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
-            },
-            {
-                name: 'Retrieval Augmented Generation (RAG)', 
-                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
-            },
-            {
-                name: 'LangChain', 
-                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
-            },
-            {
-                name: 'PGVector', 
-                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
-            },
-            {
-                name: 'GCP Cloud Run', 
-                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
-            },
-            {
-                name: 'Docker', 
-                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
-            },
-            {
-                name: 'Git Actions', 
-                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
-            },
-        ],
-        links: [
-            {name: 'Live Demo', url: "https://kevinchatbot.com/", icon: EyeIcon,
-                class:'text-blue-400 hover:text-blue-300'
-            }, 
-            {name: 'Demo', url: "https://youtu.be/DtYpRG9FelA", icon: EyeIcon,
-                class:'text-blue-400 hover:text-blue-300'
-            },
-            {name: 'Code', url: "https://github.com/PhucNguyenAH/MyAgent", icon: CodeBracketIcon,
-                class:'text-cyan-400 hover:text-cyan-300'
-            },
-        ]
-    },
-    {
-        id: 4,
         title: "Text and object inpainting application",
         desc: `The application uses AI for removing text and objects in comic.
         • Deployed text inpainting API using LaMa model and text detection APIs using EasyOCR and Google Vision API, which is the main feature in the webtoon editor. 
@@ -274,7 +277,7 @@ const projects = ref([
         ]
     },
     {
-        id: 5,
+        id: 4,
         title: "SonicJob application",
         desc: `The job platform to support both job seekers and recruiters.
         • Collected, cleaned and combined multiple job skill datasets to fine-tune RoBerta for Name Entity Recognition task, achieving F1 score of 81%. 
@@ -316,7 +319,7 @@ const projects = ref([
     },
 
     {
-        id: 6,
+        id: 5,
         title: "Navigating Textual Environments through Reinforcement Learning in TextWorld Game",
         desc: `The TextWorld Cooking Game environment is a text-based environment to train reinforcement learning agents to complete a full cooking task using natural language commands. The goal is to find the kitchen, read the cookbook to learn a recipe, gather ingredients, process them, and finally prepare and eat the meal.
         • Develop Actor-Critic and Deep Q-Network agents to solve the multiple Textworld games, achieving 80-90% in baseline environments.`,
