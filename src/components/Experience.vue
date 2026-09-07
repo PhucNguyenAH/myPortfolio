@@ -63,25 +63,9 @@ import { BriefcaseIcon, Squares2X2Icon } from '@heroicons/vue/16/solid';
 const experiences = [
     {
         id: 1,
-        position: "AI engineer",
-        company: "Chipforge.ai",
-        period: "May 2026 - August 2026",
-        desc: `<strong>Project: LLM for chip design</strong>
-        • Implemented the Reflexion Loop in Chipforge platform, wrote testcases for unitest, fix the bugs of HDL in 3-5 iterations.
-        • Data mining and analysis of around 1600 HDL GitHub repositories, processing the CPT, generating the HDL specifications for SFT data and training Nemotron3-Nano.`,
-        techStack: ['Python', 'Pytorch', 'continuous pretraining and fine-tuning LLM', 'Icarus Verilog', 'AWS S3', 'Bedrock', 'OpenRouter'],
-        borderColor: "border-cyan-500/30",
-        dotColor: "bg-cyan-500",
-        borderClass: "border-cyan-500/20",
-        dateColor: "text-cyan-400 text-sm font-semibold",
-        companyColor: "text-blue-400",
-    },
-
-    {
-        id: 2,
         position: "Research Assistant",
         company: "University of Technology, Sydney",
-        period: "April 2025 - February 2026",
+        period: "April 2025 - August 2026",
         desc: `<strong>Project: Scoliosis Assessment Application</strong>
         • Implemented ETL pipeline for processing X-ray images, resulting in over 20,000 X-ray images with landmark annotations.
         • Fine-tuned Mask R-CNN models for vertebrae segmentation and proposed APEX/Cobb angle measurement method, with an absolute error of 3.02°±2.85°.
@@ -96,20 +80,6 @@ const experiences = [
 
     {
         id: 3,
-        position: "Research Assistant",
-        company: "The University of Melbourne",
-        period: "October 2025 - December 2025",
-        desc: `• Implemented an automated workflow in n8n that runs the ETL pipeline to extract and transform data from GeoScape APIs and Google Maps APIs to generate comprehensive property reports.`,
-        techStack: ['n8n', 'Python', 'GeoScape API', 'Google Maps API', 'ETL'],
-        borderColor: "border-cyan-500/30",
-        dotColor: "bg-cyan-500",
-        borderClass: "border-cyan-500/20",
-        dateColor: "text-cyan-400 text-sm font-semibold",
-        companyColor: "text-blue-400",
-    },
-
-    {
-        id: 4,
         position: "Machine Learning Engineer",
         company: "Ycomm Viet Nam",
         period: "April 2023 - January 2024",
@@ -129,7 +99,7 @@ const experiences = [
     },
 
     {
-        id: 5,
+        id: 4,
         position: "Artificial Intelligence Specialist",
         company: "VinBigData",
         period: "October 2021 - July 2022",
@@ -154,7 +124,7 @@ const experiences = [
     },
 
     {
-        id: 6,
+        id: 5,
         position: "Data Scientist",
         company: "FPT Telecom",
         period: "June 2021 - October 2021",
@@ -170,7 +140,7 @@ const experiences = [
     },
 
     {
-        id: 7,
+        id: 6,
         position: "Artificial Intelligence Intern",
         company: "Cloud Nine Solutions",
         period: "July 2020 - October 2020",
