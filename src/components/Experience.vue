@@ -79,7 +79,7 @@ const experiences = [
     },
 
     {
-        id: 3,
+        id: 2,
         position: "Machine Learning Engineer",
         company: "Ycomm Viet Nam",
         period: "April 2023 - January 2024",
@@ -99,7 +99,7 @@ const experiences = [
     },
 
     {
-        id: 4,
+        id: 3,
         position: "Artificial Intelligence Specialist",
         company: "VinBigData",
         period: "October 2021 - July 2022",
@@ -124,7 +124,7 @@ const experiences = [
     },
 
     {
-        id: 5,
+        id: 4,
         position: "Data Scientist",
         company: "FPT Telecom",
         period: "June 2021 - October 2021",
@@ -140,7 +140,7 @@ const experiences = [
     },
 
     {
-        id: 6,
+        id: 5,
         position: "Artificial Intelligence Intern",
         company: "Cloud Nine Solutions",
         period: "July 2020 - October 2020",
