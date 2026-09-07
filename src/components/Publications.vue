@@ -14,7 +14,7 @@
             </div>
 
             <!-- Publications Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div
                 v-for="(publication, index) in publications"
                 :key="publication.id"
@@ -136,7 +136,7 @@ const publications = ref([
         title: "EEG-TCNTransformer: A Temporal Convolutional Transformer for Motor Imagery Brain–Computer Interfaces",
         desc: 'In brain–computer interface motor imagery (BCI-MI) systems, convolutional neural networks (CNNs) have traditionally dominated as the deep learning method of choice, demonstrating significant advancements in state-of-the-art studies. Recently, Transformer models with attention mechanisms have emerged as a sophisticated technique, enhancing the capture of long-term dependencies and intricate feature relationships in BCI-MI. This research investigates the performance of EEG-TCNet and EEG-Conformer models, which are trained and validated using various hyperparameters and bandpass filters during preprocessing to assess improvements in model accuracy. Additionally, this study introduces EEG-TCNTransformer, a novel model that integrates the convolutional architecture of EEG-TCNet with a series of self-attention blocks employing a multi-head structure. EEG-TCNTransformer achieves an accuracy of 83.41% without the application of bandpass filtering.',
         image: '/publication2.png',
-        category: 'Journal Q2',
+        category: 'Journal Q1',
         bordColor: 'border-cyan-500/20',
         badgColor: "bg-cyan-500",
         technolg: [
@@ -163,6 +163,39 @@ const publications = ref([
             },
             {name: 'Code', url: "https://github.com/PhucNguyenAH/EEG-TCNTransformer", icon: CodeBracketIcon,
                 class:'text-cyan-400 hover:text-cyan-300'
+            },
+        ]
+    },
+
+    {
+        id: 3,
+        title: "Auto-ISC: Inter-Sample Contrastive Learning for Automated Curve Angle Calculation From Ultrasound",
+        desc: `Scoliosis assessment has been increasingly supported by AI-assisted tools, enabling more efficient and standardised clinical workflows. However, existing ultrasound-based pipelines often suffer from limited generalisation and unstable performance. These limitations primarily arise from two challenges: (1) suboptimal segmentation under low-contrast and noisy imaging conditions, and (2) unreliable anatomical landmark identification due to missing or ambiguous features. To address these issues, we propose Auto-ISC, a novel two-stage automated ultrasound scoliosis assessment system. The first stage employs the ISC-Swin segmentation model, enhanced by an Inter-Sample Contrastive Bank (ISCB) to improve cross-sample feature consistency and class-level discrimination. The second stage introduces a dynamic pairing logic algorithm for accurate matching of thoracic vertebrae, enabling reliable downstream angle estimation. Experimental results demonstrate strong segmentation performance (Dice: 86.10%, IoU: 76.08%) and high agreement with manual measurements. The proposed method achieves low average absolute differences (ABS) (thoracic: 2.83° ± 2.16°; lumbar: 2.89° ± 2.55°) and strong correlations (𝑅2 = 0.91 for thoracic and 0.81 for lumbar). Overall, Auto-ISC provides a reliable and radiation-free solution for automated scoliosis assessment, with improved clinical applicability.`,
+        image: '/publication3.png',
+        category: 'Journal Q1',
+        bordColor: 'border-blue-500/20',
+        badgColor: "bg-blue-500",
+        technolg: [
+            {
+                name: 'Python', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+            },
+            {
+                name: 'Pytorch', 
+                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+            },
+            {
+                name: 'High-Performance Computing', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+            },
+            {
+                name: 'Git', 
+                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+            },
+        ],
+        links: [
+            {name: 'DOI', url: "https://doi.org/10.1049/cit2.70157", icon: DocumentTextIcon,
+                class:'text-blue-400 hover:text-blue-300'
             },
         ]
     },
