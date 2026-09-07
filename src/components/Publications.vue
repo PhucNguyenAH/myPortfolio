@@ -97,40 +97,37 @@ import {
 const publications = ref([
     {
         id: 1,
-        title: "Evolving optimized transformer-hybrid systems for robust BCI signal processing using genetic algorithms",
-        desc: `• Transformer-based BCIs boost robustness for weak learners but need expert tuning.
-        • Rising complexity in BCI models demands automated architecture search.
-        • Genetic algorithms evolve convolutional, transformer, and noise layers automatically.
-        • Evolved models hit 89.3%±6.1% on Dataset I and 84.5%±9.6% on Dataset II.
-        • Server-side embedding enables evolutionary personalization of EEG-BCI models.`,
-        image: '/publication1.jpg',
+        title: "Auto-ISC: Inter-Sample Contrastive Learning for Automated Curve Angle Calculation From Ultrasound",
+        desc: `Scoliosis assessment has been increasingly supported by AI-assisted tools, enabling more efficient and standardised clinical workflows. However, existing ultrasound-based pipelines often suffer from limited generalisation and unstable performance. These limitations primarily arise from two challenges: (1) suboptimal segmentation under low-contrast and noisy imaging conditions, and (2) unreliable anatomical landmark identification due to missing or ambiguous features. To address these issues, we propose Auto-ISC, a novel two-stage automated ultrasound scoliosis assessment system. The first stage employs the ISC-Swin segmentation model, enhanced by an Inter-Sample Contrastive Bank (ISCB) to improve cross-sample feature consistency and class-level discrimination. The second stage introduces a dynamic pairing logic algorithm for accurate matching of thoracic vertebrae, enabling reliable downstream angle estimation. Experimental results demonstrate strong segmentation performance (Dice: 86.10%, IoU: 76.08%) and high agreement with manual measurements. The proposed method achieves low average absolute differences (ABS) (thoracic: 2.83° ± 2.16°; lumbar: 2.89° ± 2.55°) and strong correlations (𝑅2 = 0.91 for thoracic and 0.81 for lumbar). Overall, Auto-ISC provides a reliable and radiation-free solution for automated scoliosis assessment, with improved clinical applicability.`,
+        image: '/publication3.png',
         category: 'Journal Q1',
         bordColor: 'border-blue-500/20',
         badgColor: "bg-blue-500",
         technolg: [
             {
                 name: 'Python', 
-                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
             },
             {
-                name: 'PyTorch', 
-                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+                name: 'Pytorch', 
+                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
             },
             {
                 name: 'High-Performance Computing', 
                 class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
             },
             {
-                name: 'GitHub', 
+                name: 'Git', 
                 class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
             },
         ],
         links: [
-            {name: 'DOI', url: "https://doi.org/10.1016/j.bspc.2025.107883", icon: DocumentTextIcon,
+            {name: 'DOI', url: "https://doi.org/10.1049/cit2.70157", icon: DocumentTextIcon,
                 class:'text-blue-400 hover:text-blue-300'
             },
         ]
     },
+    
     {
         id: 2,
         title: "EEG-TCNTransformer: A Temporal Convolutional Transformer for Motor Imagery Brain–Computer Interfaces",
@@ -169,32 +166,36 @@ const publications = ref([
 
     {
         id: 3,
-        title: "Auto-ISC: Inter-Sample Contrastive Learning for Automated Curve Angle Calculation From Ultrasound",
-        desc: `Scoliosis assessment has been increasingly supported by AI-assisted tools, enabling more efficient and standardised clinical workflows. However, existing ultrasound-based pipelines often suffer from limited generalisation and unstable performance. These limitations primarily arise from two challenges: (1) suboptimal segmentation under low-contrast and noisy imaging conditions, and (2) unreliable anatomical landmark identification due to missing or ambiguous features. To address these issues, we propose Auto-ISC, a novel two-stage automated ultrasound scoliosis assessment system. The first stage employs the ISC-Swin segmentation model, enhanced by an Inter-Sample Contrastive Bank (ISCB) to improve cross-sample feature consistency and class-level discrimination. The second stage introduces a dynamic pairing logic algorithm for accurate matching of thoracic vertebrae, enabling reliable downstream angle estimation. Experimental results demonstrate strong segmentation performance (Dice: 86.10%, IoU: 76.08%) and high agreement with manual measurements. The proposed method achieves low average absolute differences (ABS) (thoracic: 2.83° ± 2.16°; lumbar: 2.89° ± 2.55°) and strong correlations (𝑅2 = 0.91 for thoracic and 0.81 for lumbar). Overall, Auto-ISC provides a reliable and radiation-free solution for automated scoliosis assessment, with improved clinical applicability.`,
-        image: '/publication3.png',
+        title: "Evolving optimized transformer-hybrid systems for robust BCI signal processing using genetic algorithms",
+        desc: `• Transformer-based BCIs boost robustness for weak learners but need expert tuning.
+        • Rising complexity in BCI models demands automated architecture search.
+        • Genetic algorithms evolve convolutional, transformer, and noise layers automatically.
+        • Evolved models hit 89.3%±6.1% on Dataset I and 84.5%±9.6% on Dataset II.
+        • Server-side embedding enables evolutionary personalization of EEG-BCI models.`,
+        image: '/publication1.jpg',
         category: 'Journal Q1',
         bordColor: 'border-blue-500/20',
         badgColor: "bg-blue-500",
         technolg: [
             {
                 name: 'Python', 
-                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
+                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
             },
             {
-                name: 'Pytorch', 
-                class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
+                name: 'PyTorch', 
+                class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
             },
             {
                 name: 'High-Performance Computing', 
                 class: 'bg-cyan-500/20 border-cyan-400/30 text-cyan-200',
             },
             {
-                name: 'Git', 
+                name: 'GitHub', 
                 class: 'bg-blue-500/20 border-blue-400/30 text-blue-200',
             },
         ],
         links: [
-            {name: 'DOI', url: "https://doi.org/10.1049/cit2.70157", icon: DocumentTextIcon,
+            {name: 'DOI', url: "https://doi.org/10.1016/j.bspc.2025.107883", icon: DocumentTextIcon,
                 class:'text-blue-400 hover:text-blue-300'
             },
         ]
