@@ -63,7 +63,7 @@ import { BriefcaseIcon, Squares2X2Icon } from '@heroicons/vue/16/solid';
 const experiences = [
     {
         id: 1,
-        position: "Research Assistant",
+        position: "AI/ML Engineer",
         company: "University of Technology, Sydney",
         period: "April 2025 - August 2026",
         desc: `<strong>Project: Scoliosis Assessment Application</strong>
