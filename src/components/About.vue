@@ -135,7 +135,7 @@ const aboutImage = [
     {
         id: 1,
         src: about1,
-        alt: "Anh - AI/ML Engineer",
+        alt: "Kevin - AI/ML Engineer",
         gradient: 'bg-linear-to-r from-blue-600 to-cyan-600 border-blue-400/40',
         badge: 'AI/ML Engineer',
         badgeColor: 'bg-blue-500',
@@ -146,7 +146,7 @@ const aboutImage = [
     {
         id: 2,
         src: about2,
-        alt: "Anh - Data Scientist",
+        alt: "Kevin - Data Scientist",
         gradient: 'bg-linear-to-r from-blue-500 to-cyan-500 border-blue-400/40',
         badge: 'Data Scientist',
         badgeColor: 'bg-cyan-500',
@@ -157,7 +157,7 @@ const aboutImage = [
     {
         id: 3,
         src: about3,
-        alt: "Anh - Research Assistant",
+        alt: "Kevin - Research Assistant",
         gradient: 'bg-linear-to-r from-blue-500 to-cyan-500 border-blue-400/40',
         badge: 'Research Assistant',
         badgeColor: 'bg-cyan-500',
@@ -168,7 +168,7 @@ const aboutImage = [
     {
         id: 4,
         src: about4,
-        alt: "Anh - Data Analyst",
+        alt: "Kevin - Data Analyst",
         gradient: 'bg-linear-to-r from-blue-600 to-cyan-600 border-blue-400/40',
         badge: 'Data Analyst',
         badgeColor: 'bg-blue-500',
@@ -222,7 +222,7 @@ const ctaButtons = [
         icon: ArrowRightIcon,
         iconclass: 'ml-2 group-hover:translate-x-1 transition-transform',
         classes: 'bg-linear-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-500 hover:to-cyan-500',
-        onClick: () => window.open('https://anhhoangphucnguyen.com', '_blank')
+        onClick: () => window.open('https://kevinchatbot.com', '_blank')
     },
     {
         id:2,

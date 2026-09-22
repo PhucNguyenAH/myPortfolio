@@ -170,7 +170,7 @@ const projects = ref([
             },
         ],
         links: [
-            {name: 'Live Demo', url: "anhhoangphucnguyen.com", icon: EyeIcon,
+            {name: 'Live Demo', url: "kevinchatbot.com", icon: EyeIcon,
                 class:'text-blue-400 hover:text-blue-300'
             },
             {name: 'Code', url: "https://github.com/PhucNguyenAH/myPortfolio", icon: CodeBracketIcon,
