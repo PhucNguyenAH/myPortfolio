@@ -14,7 +14,7 @@
                     <span
                     class="text-transparent bg-clip-text bg-linear-to-r
                     from-blue-400 to-cyan-400"
-                    >Anh Hoang Phuc Nguyen </span> 👋
+                    >Kevin Nguyen </span> 👋
                 </h1>
                 <p
                 class="text-blue-200 font-medium text-lg md:text-xl
@@ -52,8 +52,8 @@
                     </span>
                 </button>
                 <a
-                href="/Anh Hoang Phuc Nguyen - resume.pdf"
-                download="Anh Hoang Phuc Nguyen - resume.pdf"
+                href="/Kevin Nguyen - resume.pdf"
+                download="Kevin Nguyen - resume.pdf"
                 class="border-2 border-blue-400 px-8 md:px-10
                 py-4 rounded-1 relative group w-full sm:w-max
                 flex justify-center hover:bg-blue-400/10

@@ -25,7 +25,7 @@
                         <EnvelopeIcon class="w-6 h-6 text-blue-400"/>
                         <div>
                             <p class="text-white font-semibold">Email</p>
-                            <p class="text-blue-200">AnhHoangPhucNguyen@gmail.com</p>
+                            <p class="text-blue-200">KevinNguyen4499@gmail.com</p>
                         </div>
                     </div>
 
