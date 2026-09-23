@@ -72,7 +72,7 @@
                             </svg>
                         </a>
                         <!-- Gmail -->
-                        <a href="https://mail.google.com/mail/?view=cm&to=anhhoangphucnguyen@gmail.com"
+                        <a href="https://mail.google.com/mail/?view=cm&to=kevinnguyen4499@gmail.com"
                         target="_blank" rel="noopener noreferrer"
                         class="p-3 bg-red-500/20 border border-red-400/30
                         rounded-xl text-red-400 hover:bg-red-500/30 transition-all">

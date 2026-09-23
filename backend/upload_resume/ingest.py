@@ -20,7 +20,7 @@ from markitdown import MarkItDown
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = BACKEND_DIR.parent
-DEFAULT_PDF = REPO_ROOT / "public" / "Anh Hoang Phuc Nguyen - resume.pdf"
+DEFAULT_PDF = REPO_ROOT / "public" / "Kevin Nguyen - resume.pdf"
 
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 150
